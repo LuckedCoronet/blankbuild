@@ -1,0 +1,29 @@
+{
+	"$schema": "https://www.schemastore.org/prettierrc.json",
+
+	"endOfLine": "lf",
+	"printWidth": 100,
+	"useTabs": true,
+	"tabWidth": 4,
+	"plugins": ["@ianvs/prettier-plugin-sort-imports"],
+	"importOrder": [
+		"<TYPES>^(node:)",
+		"<TYPES>",
+		"<TYPES>^[.]",
+		"<BUILTIN_MODULES>",
+		"<THIRD_PARTY_MODULES>",
+		"^[.]"
+	],
+	"importOrderTypeScriptVersion": "7.0.2",
+
+	"overrides": [
+		{
+			"files": "*.md",
+			"options": {
+				"useTabs": false,
+				"tabWidth": 2,
+				"proseWrap": "always"
+			}
+		}
+	]
+}

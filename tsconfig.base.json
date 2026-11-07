@@ -1,0 +1,17 @@
+{
+	"compilerOptions": {
+		"target": "esnext",
+		"module": "nodenext",
+		"moduleDetection": "force",
+		"lib": ["esnext"],
+		"types": ["node"],
+		"erasableSyntaxOnly": true,
+		"rewriteRelativeImportExtensions": true,
+		"verbatimModuleSyntax": true,
+		"strict": true,
+		"noUncheckedIndexedAccess": true,
+		"noUncheckedSideEffectImports": true,
+		"noImplicitOverride": true,
+		"skipLibCheck": true
+	}
+}

@@ -1,0 +1,37 @@
+{
+	"name": "blankbuild",
+	"version": "0.1.0",
+	"license": "MIT",
+	"type": "module",
+	"scripts": {
+		"build": "tsc",
+		"test": "node --test",
+		"format": "prettier --write .",
+		"typecheck": "tsc --noEmit && tsc -p tsconfig.test.json",
+		"clean": "rimraf dist",
+		"prebuild": "npm run clean",
+		"prepack": "npm run build"
+	},
+	"files": [
+		"dist"
+	],
+	"exports": {
+		".": {
+			"default": "./dist/index.js",
+			"types": "./dist/index.d.ts"
+		}
+	},
+	"bin": {
+		"blankbuild": "./dist/cli.js"
+	},
+	"dependencies": {
+		"cleye": "^2.7.0"
+	},
+	"devDependencies": {
+		"@ianvs/prettier-plugin-sort-imports": "^4.7.1",
+		"@types/node": "^24.19.2",
+		"prettier": "3.9.10",
+		"rimraf": "^6.1.4",
+		"typescript": "7.0.2"
+	}
+}
